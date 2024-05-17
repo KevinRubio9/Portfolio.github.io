@@ -3,7 +3,7 @@ header{
 }
 img{
 	padding-left: 20%;
-	width: 1080px;
+	width: 60%;
 	height: 150px;
 }
 header a {
@@ -32,4 +32,11 @@ header a {
 .navLista li{
  	display: inline;
     margin-right: 10px;
+}
+@media only screen and (max-width: 767px) {
+  	img{
+		padding-left: 20%;
+		width: 60%;
+		height: 50px;
+	}
 }
