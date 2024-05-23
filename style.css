@@ -1,9 +1,12 @@
 iframe{
 	
 	width: 75%;
-	height: 1000px;
+	height: 700px;
 
 }
+.iframe-container {
+	padding-left:20%;
+ }
 .pdf{
 	padding-left:20%;
 }
