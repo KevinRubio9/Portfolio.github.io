@@ -3,9 +3,259 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style.css">
 	<title></title>
 </head>
 <body>
-<h1>FUNDAMENTOS DE PROGAMACION</h1>
+	<header>
+		<a href="../triUno.html"><h1> TRIMESTRE UNO </h1></a>
+	</header>
+
+	<nav>
+		<ol class="navLista">
+			<li><a href="anaAprVid/anaAprVid.html">ANALISIS Y APRESIACION DE VIDEOJUEGOS</a></li>
+			<li><a href="conDisGra/conDisGra.html">CONCEPTOS DE DISEÑO GRAFICO</a></li>
+			<li><a href="comVid/comVid.html">COMUNICACION EN LOS VIDEOJUEGOS</a></li>
+		</ol>
+	</nav>
+
+	<article>
+		<section class="seccionTitulos">
+			<h1 class="titPri">FUNDAMENTOS DE PROGRAMACIÓN</h1>
+		</section>
+		<section>
+			<ol>
+			<li><a href="#tipDatVar">TIPOS DE DATOS Y VARIABLES</a></li>
+
+				<ul>
+					<li><a href="#numEnt">Números enteros</a></li>
+					<li><a href="#numPunFlo">Números de punto flotante</a></li>
+					<li><a href="#des">Decimal en C#</a></li>
+					<li><a href="#car">Carácteres en C#</a></li>
+					<li><a href="#bol">Boleanos en C#</a></li>					
+				</ul>
+ 			<li><a href="#ope">OPERADORES</a></li>		
+			<li><a href="#con">CONDICIONALES</a></li>
+			<ul>
+			 	<li><a href="#if">If</a></li>
+ 				<li><a href="#ifEls">If else if</a></li>
+ 				<li><a href="#swi">Switch</a></li>
+			</ul>
+			<li><a href="#arr">ARREGLOS</a></li>
+			<li><a href="#lisMat">LISTAS Y MATRICES</a></li>
+			<li><a href="#cig">CIGLOS</a></li>
+			<ul>
+				<li><a href="#cicFor">Ciclo for</a></li>
+				<li><a href="#cicWhi">Ciclo While</a></li>	
+			</ul>
+			<li><a href="#poo">POO</a></li>	
+		</ol>
+		</section>
+	<section class="seccionParrafos">	
+		<h2 id="tipDatVar">TIPOS DE DATOS Y VARIABLES</h2>		
+		<p>	
+			En C#, un tipo de datos es una categoría que define un conjunto de valores y el conjunto de operaciones permitidas sobre ellos. Los tipos de datos en C# se pueden clasificar en dos categorías: tipos de valor y tipos de referencia.<br>
+
+			Tipos de valor: Son aquellos tipos de datos que representan valores concretos, como números enteros, números de punto flotante, caracteres, etc. Algunos ejemplos de tipos de valor en C# son int, float, double, char, etc.<br>
+
+			Tipos de referencia: Son aquellos tipos de datos que representan referencias a objetos en memoria, como cadenas, arreglos, clases, etc. Algunos ejemplos de tipos de referencia en C# son string, object, dynamic, etc.
+
+
+		</p>
+		<h3 id="numEnt">Números enteros</h3>
+		<p>	
+			byte es un número entero sin signo que puede almacenar valores entre 0 y 255.
+		</p>
+		<p>
+			short es un número entero con signo que puede almacenar valores entre -32768 y 32767.
+		</p>
+		<p>
+			int es un número entero con signo que puede almacenar valores entre -2147483648 y 2147483647.
+		</p>
+		<p>
+			long es un número entero con signo que puede almacenar valores entre -9223372036854775808 y 9223372036854775807.
+		</p>
+		<p>
+			Por ejemplo, el siguiente código muestra cómo se pueden declarar variables de diferentes tipos de números enteros en C#:
+		</p>
+		<p>
+			byte edad = 30;<br>
+			short añosDeExperiencia = 5;<br>
+			int númeroDeEmpleados = 1000;<br>
+			long poblaciónMundial = 7_000_000_000;<br>
+		</p>
+
+		<h3 id="numPunFlo">Números de punto flotante</h3>
+
+			<p>
+				En C#, los números flotantes son un tipo de valor que representan números con decimales. Los números flotantes en C# incluyen los siguientes tipos: float y double.
+			</p>
+			<p>
+				float es un número de punto flotante con precisión simple que puede almacenar valores con una precisión de 7 dígitos decimales aproximadamente.
+			</p>
+			<p>
+				double es un número de punto flotante con precisión doble que puede almacenar valores con una precisión de 15-16 dígitos decimales aproximadamente.<br>
+				Por ejemplo, el siguiente código muestra cómo se pueden declarar variables de diferentes tipos de números flotantes en C#:
+			</p>
+			<p>
+				float pi = 3.1415926535f;<br>
+				double tasaDeInteres = 0.05;
+			</p>
+
+		<h3 id="des">Decimal en C#</h3>	
+		<p>
+			En C#, los decimales son un tipo de valor que representan números con una precisión exacta y se utilizan para representar valores monetarios y otros valores que requieren una precisión exacta.
+		</p>
+		<p>
+			El tipo decimal en C# es un número de punto flotante con precisión exacta y puede almacenar valores con una precisión de hasta 28-29 dígitos decimales.
+		</p>
+		<p>
+			Por ejemplo, el siguiente código muestra cómo se puede declarar una variable de tipo decimal en C#:
+		</p>
+		<p>
+			decimal salario = 75000.00m;
+		</p>
+
+		<h3 id="car">Carácteres en C#</h3>	
+
+		<p>
+			En C#, los caracteres son un tipo de valor que representa un solo carácter en el alfabeto Unicode. El tipo char en C# se utiliza para representar un carácter y se puede almacenar en una sola variable. Los caracteres se representan entre comillas simples, por ejemplo: 'a', 'b', 'c', etc.
+		</p>
+		<p>
+			El siguiente código muestra cómo se puede declarar una variable de tipo char en C#:
+		</p>
+		<p>
+			char inicial = 'J';
+		</p>
+
+		<h3 id="bol">Boleanos en C#</h3>
+
+		<p>
+			En C#, los tipos booleanos son un tipo de valor que solo pueden tener dos valores: true o false. El tipo bool en C# se utiliza para representar valores lógicos o para tomar decisiones en el código.
+		</p>
+		<p>
+			El siguiente código muestra cómo se puede declarar una variable de tipo bool en C#:
+		</p>
+		<p>
+			bool esMayorDeEdad = true;
+		</p>
+
+		<h3 id="ope">OPERADORES</h3>
+
+		<p>Cambio de signo: -,+<br>
+		Aritméticos: +,-,*, /, %<br>
+		Incremento y decremento: ++, -	
+		</p>
+		<p>
+			Mayor que: ><br>
+			Menor que: <<br>
+			Igual a: == <br>			 
+		</p>
+		<p>
+			Mayor o igual que: >= <br>
+			Menor o igual que: <= <br>
+			Distinto que: !=	
+		</p>
+
+		<h2 id="con">CONDICIONALES</h2>
+
+		<h3 id="if">IF</h3>
+
+		<p>Las estructuras condicionales en C#, así como en cualquier otro 	lenguaje de programación, puede estar formada por un solo if, o por varios if anidados. Este tipo de estructuras se utilizan cuando queremos modificar el flujo de un programa.<br>
+		EJEMPLO
+		</p>
+
+		<p>
+			if(condicion)<br>
+			{<br>
+				ejecucion<br>
+			}<br>
+		</p>
+		<h3 id="ifEls">Condicionales en C# if else if</h3>
+		<p>
+			Este tipo de estructura consiste en anidar varios if para evaluar varias condiciones.<br>
+			De esta forma el programa evaluará diferentes condiciones de forma que ejecutará la que corresponda en cada caso.
+		</p>
+
+		<p>
+			if (condicion)<br>
+			{<br>
+				ejecucion <br>
+			}<br>
+			else if (condicion) <br>	
+			{<br>
+				ejecucion<br>
+			}<br>
+			else<br>
+			{<br>
+				ejecucion<br>
+			}<br>
+		</p>
+
+		<h3 id="swi">Switch case</h3>
+		<p>
+			Esta estructura podemos traducirla como «selecciona el caso, dependiendo del valor que tome una variable. 
+		</p>
+
+		<p>
+			int dia = 0;<br>
+			Console.WriteLine("introduce un día")<br>
+			int.TryParse(Console.ReadLine(),out dia)<br>
+
+			switch (dia)<br>
+			{
+				case 1:	<br>
+				Console.WriteLine("Es lunes");<br>
+                    break;<br>
+                case 2:<br>
+                Console.WriteLine("Es Martes");	 <br>   
+ 				break;<br>
+			}
+		</p>
+		<h2 id="con">ARREGLOS</h2>
+		<p>
+			Puede almacenar varias variables del mismo tipo en una estructura de datos de matriz. Puede declarar una matriz mediante la especificación del tipo de sus elementos. Si quiere que la matriz almacene elementos de cualquier tipo, puede especificar object como su tipo. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de Object.
+		</p>
+		<p>
+			int[] array1 = new int[5];
+		</p>
+
+		<h2 id="cic">CICLOS</h2>
+		<h3 id="cicFor">Ciclo for</h3>
+		<p>
+			Esta estructura, comienza dándole un valor determinado a una variable. Mientras esa variable no llegue a tener un valor determinado, se ejecutarán las instrucciones que están en su interior. Esto lo hace incrementando o decrementando la variable a cada vuelta de bucle.
+		</p>
+		<p>
+			for (int i = 0; i < 10; i++ ){<br>
+				codigo<br>
+			}<br>
+		</p>
+
+		<h3 id="cicWhi">Ciclo While</h3>
+
+		<p>
+			While podemos traducirlo por mientras. El programa entrará y ejecutará las instrucciones de este bucle cuando se cumpla una condición y siempre y cuando mientras esa condición se cumpla. Este bucle evalúa una condición. Ejecuta las instrucciones y después evalúa si la condición se modifica o no. Debido a esto, debemos tener cuidado, para no crear un bucle infinito. Veamos un ejemplo del bucle While.
+		</p>
+		<p>
+			int numero = 1;<br>
+			while(numero < 100)<br>
+
+			{<br>
+
+				Console.WriteLine("Hola mundo")<br>
+
+				numero ++;	<br>
+
+			}<br>
+
+		</p>
+	</section>	
+		</section>
+	</article>
+
+	<footer>
+	
+	</footer>
+
 </body>
 </html>
